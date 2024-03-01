@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    backdrop-filter: 50px;
+    box-sizing: border-box;
+    border: 0;
+    outline:0;
+    list-style: none;
+    text-decoration: none;
+  
+  }
+
+ 
+  html{
+    scroll-behavior: smooth;
+    font-family: "Playfair Display SC", serif;
+    scrollbar-width: thin;
+  scrollbar-color: #cf8de93d;
+  text-transform: uppercase;
+  padding: 5%;
+  }
+ 
+#upper > section > p{
+   padding-top: 1%;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-align: justify;
+
+}
+
+
+#upper > h1 {
+    text-align: center;
+     padding-top: 4%;
+     font-size: 48px;
+}
+
+#upper > section > button {
+    float: right;
+    padding:1%;
+    margin-top: 2%;
+    
+}
+
+strong{
+    font-size: 24px;
+}
+ 
+
+nav{
+    padding-top: 15%;
+}
+
+#nav-1{
+  padding-top: 15%;
+  display: none;
+}
+
+#extras{
+  display: none;
+}
+
+nav > h3{
+    font-size: 36px;
+}
+
+#nav-bar{
+    text-align: center;
+}
+
+nav > #nav-bar > a{
+    margin-left: 4%;
+    color: rgb(0, 0, 0);
+   
+}
+ 
+  #collection > #cta  {
+   text-align: center;
+   
+  }
+
+  #collection > #cta > p {
+font-size: 14px;
+    
+   }
+ 
+
+  #collection{
+    position: relative;
+    padding-bottom: 10%;
+    text-align: center;
+ 
+  }
+  #main{
+    
+    position: relative;
+    display: none;
+  }
+
+  section > button{
+    background-color: #4c6244;
+  }
+
+  #main > a >  button {
+ 
+position: absolute;
+right: 0;
+bottom: 0;
+z-index: 999;
+background-color: #4c6244;
+color: white;
+padding: 2%;
+  }
+
+  #main > a >  button:hover,   section > button:hover {
+ 
+    
+    background-color: #dcdcdc;
+    color:#4c6244 ;
+    transition: 0.5s ease;
+      }
+
+  #mainImage, #moodboardImg, #presentationImg  {
+    width: 100%;
+    
+
+  }
+  .presentation , .dessin-tech , .moodboard{
+    font-weight: 700;
+    letter-spacing: 7px;
+  }
+
+  #academia:hover{
+    color: #681b08;
+    font-size: 18px;
+    transition: 1s ease;
+  }
+
+  nav > #nav-bar > a:hover{
+    font-size: 18px;
+    transition: 0.5s ease;
+  }
+
+  #whimsical:hover{
+    color:  #925db5;
+  
+  }
+
+  
+  #ethereal:hover{
+    color:  #97d5e3;
+   
+  }
+ 
+
+  
+  #victorian:hover{
+    color:  #401f57;
+   
+  }
+
+  #rocco:hover{
+    color:  #e197d4;
+    
+  }
+
+  #country:hover{
+    color: #96bee2;
+  }
+ 
+ 
+
+
+
+  
