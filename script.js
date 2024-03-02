@@ -2,7 +2,7 @@ window.onload = function () {
 
     let collection = document.querySelectorAll('.cta');
     let extra = document.querySelectorAll('.cta-extra');
-  
+    let openCV = document.getElementById('openCV')
     for (var i=0; i<collection.length; i++) {
         collection[i].addEventListener('click', showCollection);
     }
@@ -10,34 +10,103 @@ window.onload = function () {
     for (var i=0; i<extra.length; i++) {
         extra[i].addEventListener('click', showExtra);
     }
+
+    openCV.addEventListener('click', showOpenCV);
+
+function showOpenCV(){
+     // Specify the path to your CV file
+     var cvFilePath = 'assets/CV_Yusr_Leila_Aoune.pdf';  // Replace this with the actual path to your CV file
+
+     // Open the CV file in a new tab
+     window.open(cvFilePath, '_blank');
+}
     
 
 function showExtra(){
 
+    let artsVisuels = ['assets/extras/arts_visuel/Portfolionumber1to number19_Page_13.jpg',
+'assets/extras/arts_visuel/Portfolionumber1to number19_Page_14.jpg', 'assets/extras/arts_visuel/Portfolionumber1to number19_Page_16.jpg', 
+ 'assets/extras/arts_visuel/Portfolionumber1to number19_Page_17.jpg', 'assets/extras/arts_visuel/Portfolionumber1to number19_Page_18.jpg',
+'assets/extras/arts_visuel/Portfolionumber1to number19_Page_19.jpg' ]
+
+let couture = ['assets/extras/Couture/Portfolionumber1to number19_Page_01.jpg', 'assets/extras/Couture/Portfolionumber1to number19_Page_02.jpg',
+'assets/extras/Couture/Portfolionumber1to number19_Page_03.jpg', 'assets/extras/Couture/Portfolionumber1to number19_Page_04.jpg', 'assets/extras/Couture/Portfolionumber1to number19_Page_05.jpg',
+'assets/extras/Couture/Portfolionumber1to number19_Page_06.jpg', 'assets/extras/Couture/Portfolionumber1to number19_Page_07.jpg',
+'assets/extras/Couture/Portfolionumber1to number19_Page_08.jpg', 'assets/extras/Couture/Portfolionumber1to number19_Page_09.jpg', 
+'assets/extras/Couture/Portfolionumber1to number19_Page_10.jpg', 'assets/extras/Couture/Portfolionumber1to number19_Page_11.jpg',
+'assets/extras/Couture/Portfolionumber1to number19_Page_12.jpg', 'assets/extras/Couture/Portfolionumber1to number19_Page_15.jpg' ]
+
+let photoAlbum = ['assets/extras/Photo_Album/PhotoPortfolio_Page_01.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_02.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_03.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_04.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_05.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_06.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_07.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_08.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_09.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_10.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_11.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_12.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_13.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_14.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_15.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_16.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_17.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_18.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_19.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_20.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_21.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_22.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_23.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_24.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_25.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_26.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_27.jpg',
+    'assets/extras/Photo_Album/PhotoPortfolio_Page_28.jpg']
+
       // Get the clicked category
   let extra = this.id;
-console.log(extra);
+ ;
  
+ let imageArray;
+ switch (extra) {
+     case 'couture':
+         imageArray = couture;
+         break;
+     case 'arts visuals':
+         imageArray = artsVisuels;
+         break;
+     case 'photo album':
+         imageArray = photoAlbum;
+         break;
+     default:
+         // Default case, do something if needed
+         break;
+ }
 
-  // Find the corresponding image path in the array
-  let imagePath;
-  let moodboardPath;
-  let presentationPath
-  switch (extra) {
-      case 'couture':
-          console.log('Couture')
-          break;
-      case 'arts visuals':
-        alert('hii')
-          break;
-      case 'photo album':
-        alert('hii')
-          break;
-      default:
-          // Default case, do something if needed
-          break;
-  }
+ // Display the images
+ if (imageArray) {
+     
+     let container = document.getElementById('extras');
 
+     // Clear existing content
+     container.innerHTML = '';
+
+     // Append images to the container
+     for (let i = 0; i < imageArray.length; i++) {
+    
+       
+        let textNum = container.appendChild(document.createElement('h2'))
+        textNum.innerHTML =    `${i}`
+         let newImage = document.createElement('img');
+         newImage.src = imageArray[i];
+       
+         container.appendChild(newImage);
+     }
+ }
+
+ document.getElementById('button-extra').style.display= 'block'
 
 
 }
